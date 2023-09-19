@@ -37,6 +37,9 @@ class ASWCaribbeanCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+		class UInputAction* SprintAction;
+
 public:
 	ASWCaribbeanCharacter();
 	
@@ -48,6 +51,7 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
 			
 
 protected:

@@ -29,6 +29,8 @@ void UCharacterStats::StatsInit()
 	if (NewCharacter)
 	{
 		CharacterName = "DEV Player";
+		FFinalAdd = Constitution * FAddByConst;
+		MaxHealth = MaxHealth + FFinalAdd;
 		CurrentHealth = MaxHealth;
 		CurrentLevel = 1;
 		CurrentMana = MaxMana;
@@ -49,6 +51,16 @@ void UCharacterStats::UpdatePlayerMainStatsData(float VMaxHealth, float VCurrent
 	CurrentMana = VCurrentMana;
 
 }
+
+void UCharacterStats::UpdatePlayerSecondaryStatsData(int Cons, int Dex, int Intel, int Wis, int Char)
+{
+	Constitution = Cons;
+	Dexterity = Dex;
+	Inteligence = Intel;
+	Wisdom = Wis;
+	Charisma = Char;
+}
+
 
 
 

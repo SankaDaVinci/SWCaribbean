@@ -36,6 +36,9 @@ class SWCARIBBEAN_API APlayer_Character : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 		class UInputAction* LookAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+		class UInputAction* SprintAction;
+
 
 public:
 	// Sets default values for this character's properties

@@ -73,6 +73,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerAtributes")
 		int Charisma;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerAtributesValues")
+		float FAddbyDex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerAtributesValues")
+		float FAddByConst;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerAtributesValues")
+		float FFinalAdd;
+
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -82,6 +92,11 @@ protected:
 
 	UFUNCTION(BlueprintCallable, Category = "PlayerInit")
 		void UpdatePlayerMainStatsData(float VMaxHealth, float VCurrentHealth, float VMaxStamina, float VCurrentStamina, float VMaxMana, float VCurrentMana);
+
+	UFUNCTION(BlueprintCallable, Category = "PlayerInit")
+		void UpdatePlayerSecondaryStatsData(int Cons, int Dex, int Intel, int Wis, int Char);
+
+	
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
